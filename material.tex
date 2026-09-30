@@ -1,0 +1,578 @@
+\documentclass[11pt]{beamer}
+\usetheme{CambridgeUS}
+\usecolortheme{orchid}
+
+% ============================================================
+% PACOTES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{gensymb}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{}
+
+% ============================================================
+% DADOS — CAPA
+% ============================================================
+\author[Joao Victor]{%
+	Joao Victor\\[0.3em]
+	\small\texttt{2024007388@ifam.edu.br}}
+\title[IA e Educação Inclusiva]{O uso da Inteligência Artificial na Acessibilidade
+	Educacional}
+%\subtitle{Do propósito à prática com ferramentas reais}
+\institute[]{%
+	\textsuperscript{} Graduando em Licenciatura em Matemática\\
+%	\small Instituto Federal de Educação, Ciência e Tecnologia
+}
+\date{\today}
+
+% ============================================================
+% COMANDOS AUXILIARES
+% ============================================================
+\newcommand{\citabnt}[1]{%
+	\vfill
+	\begin{flushright}
+		\tiny\textit{#1}
+	\end{flushright}
+}
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+\begin{document}
+	
+	% ---------- CAPA ----------
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	% ---------- AGENDA ----------
+	\begin{frame}{Agenda}
+		\begin{center}
+			\Large
+			\textbf{POR QUÊ} $\rightarrow$ \textbf{COMO} $\rightarrow$ \textbf{O QUÊ}
+		\end{center}
+		\vspace{1.5em}
+		\begin{columns}[T]
+			\begin{column}{0.33\textwidth}
+				\centering
+				\textbf{\large POR QUÊ}\\[0.3em]
+				\tiny Propósito
+			\end{column}
+			\begin{column}{0.33\textwidth}
+				\centering
+				\textbf{\large COMO}\\[0.3em]
+			
+				\tiny Prática
+			\end{column}
+			\begin{column}{0.33\textwidth}
+				\centering
+				\textbf{\large O QUÊ}\\[0.3em]
+			
+				\tiny Síntese
+			\end{column}
+		\end{columns}
+		\citabnt{Adaptado de SINEK; AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ============================================================
+	% BLOCO 1 — POR QUÊ
+	% ============================================================
+	\section{POR QUÊ}
+	
+	\begin{frame}{}
+		\begin{center}
+			\Huge POR QUÊ
+			\vspace{1em}
+			\normalsize
+			O propósito que move tudo
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{A pergunta}
+		\begin{center}
+			\Huge
+			Por que nem todos aprendem?
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{O direito}
+		\begin{center}
+			\Large
+			\textbf{Educação é direito de todos.}\\
+			\vspace{0.5em}
+			Não privilégio de alguns.
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{As barreiras}
+		\begin{center}
+			\Large \textbf{O que impede?}
+		\end{center}
+		\vspace{1.5em}
+		\begin{columns}[T]
+			\begin{column}{0.33\textwidth}
+				\centering
+				\faIcon{blind}\\[0.3em]
+				Físicas\\ Comunicacionais
+			\end{column}
+			\begin{column}{0.33\textwidth}
+				\centering
+				\faIcon{laptop}\\[0.3em]
+				Tecnológicas\\ Metodológicas
+			\end{column}
+			\begin{column}{0.33\textwidth}
+				\centering
+				\faIcon{users}\\[0.3em]
+				Atitudinais
+			\end{column}
+		\end{columns}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{A virada}
+		\begin{center}
+			\Large
+			\textbf{E se a tecnologia pudesse}\\
+			\textbf{remover barreiras?}
+			\vspace{1em}
+			\normalsize
+			Não substituir. \textbf{Ampliar.}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{O propósito}
+		\begin{center}
+			\Large \textbf{Incluir é garantir:}
+		\end{center}
+		\vspace{1.5em}
+		\begin{center}
+			\Large
+			Acesso $\cdot$ Permanência $\cdot$ Participação $\cdot$ Aprendizagem
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026); UNESCO (1994)}
+	\end{frame}
+	
+	\begin{frame}{Atividade — 15 min}
+		\begin{center}
+			\Large \textbf{Roda de conversa}
+		\end{center}
+		\vspace{1.5em}
+		\begin{itemize}
+			\item Quem fica de fora?
+			\item O que já tentamos?
+			\item O que ainda falta?
+		\end{itemize}
+	\end{frame}
+	
+	% ============================================================
+	% BLOCO 2 — COMO
+	% ============================================================
+	\section{COMO}
+	
+	\begin{frame}{}
+		\begin{center}
+			\Huge COMO
+			\vspace{1em}
+			\normalsize
+			Ferramentas, mãos na massa e prática
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Mapa das ferramentas}
+		\begin{center}
+			\Large \textbf{As IAs que vamos usar}
+		\end{center}
+		\vspace{1em}
+		\begin{columns}[T]
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+					\item \textbf{ChatGPT} — assistente geral
+					\item \textbf{DeepSeek} — raciocínio e código
+					\item \textbf{Perplexity} — pesquisa com fontes
+					\item \textbf{NotebookLM} — análise de documentos
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+					\item \textbf{Japiim (Bemol)} — IA do Norte
+					\item \textbf{VLibras} — tradução Libras
+					\item \textbf{Seeing AI} — visão computacional
+					\item \textbf{Google Meet} — legendagem
+				\end{itemize}
+			\end{column}
+		\end{columns}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 1. ChatGPT -----
+	\begin{frame}{\faIcon{robot}~ChatGPT}
+		\textbf{O que é:} assistente conversacional da OpenAI
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Criar tutor personalizado por disciplina\\
+			• Adaptar textos para diferentes níveis de leitura\\
+			• Gerar atividades diferenciadas\\
+			• Explicar conceitos em linguagem simples
+		\end{block}
+		\textbf{Exemplo de prompt:}
+		\textit{``Adapte este texto para um aluno com dislexia, use frases curtas e linguagem simples.''}
+		\citabnt{OpenAI (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 2. DeepSeek -----
+	\begin{frame}{\faIcon{brain}~DeepSeek}
+		\textbf{O que é:} IA com foco em raciocínio e código
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Resolver problemas matemáticos passo a passo\\
+			• Criar materiais em LaTeX acessíveis\\
+			• Gerar descrições alternativas para imagens\\
+			• Apoiar programação para alunos com deficiência
+		\end{block}
+		\textbf{Diferencial:} gratuito, open-source, forte em raciocínio lógico
+		\citabnt{DeepSeek (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 3. Perplexity -----
+	\begin{frame}{\faIcon{search}~Perplexity}
+		\textbf{O que é:} buscador com IA que cita fontes
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Pesquisar legislação sobre inclusão com fontes\\
+			• Encontrar artigos científicos atualizados\\
+			• Verificar informações sobre tecnologias assistivas\\
+			• Montar bibliografias confiáveis
+		\end{block}
+		\textbf{Diferencial:} respostas com referências verificáveis
+		\citabnt{Perplexity (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 4. NotebookLM -----
+	\begin{frame}{\faIcon{book}~NotebookLM}
+		\textbf{O que é:} IA do Google para analisar documentos
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Fazer upload de PDFs e gerar resumos\\
+			• Criar guias de estudo a partir de materiais\\
+			• Gerar podcasts (Audio Overview) sobre conteúdos\\
+			• Responder perguntas com base nos documentos
+		\end{block}
+		\textbf{Diferencial:} trabalha só com o que você envia
+		\citabnt{Google (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 5. Japiim (Bemol) -----
+	\begin{frame}{\faIcon{map-marked-alt}~Japiim (Bemol)}
+		\textbf{O que é:} plataforma de IA generativa da Bemol S/A, sediada em Manaus
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Acesso a modelos da OpenAI, Groq, Anthropic, Google e Meta\\
+			• Criação de Assistentes personalizados por tema\\
+			• Atendimento em português com contexto amazônico\\
+			• Apoio a estudantes ribeirinhos e indígenas
+		\end{block}
+		\textbf{Diferencial:} IA do Norte, democratiza acesso à IA no Brasil
+		\citabnt{Japiim (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 6. VLibras -----
+	\begin{frame}{\faIcon{hands}~VLibras}
+		\textbf{O que é:} tradutor automático para Libras (gov.br)
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Instalar plugin em sites educacionais\\
+			• Traduzir textos e vídeos para Libras\\
+			• Tornar plataformas acessíveis para surdos\\
+			• Usar em apresentações e aulas online
+		\end{block}
+		\textbf{Onde:} \url{https://vlibras.gov.br}
+		\citabnt{Brasil (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 7. Seeing AI -----
+	\begin{frame}{\faIcon{eye}~Seeing AI}
+		\textbf{O que é:} app da Microsoft que descreve o mundo
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Descrever cenas e objetos para cegos\\
+			• Ler textos em voz alta (OCR)\\
+			• Identificar cores e pessoas\\
+			• Apoiar mobilidade em espaços escolares
+		\end{block}
+		\textbf{Onde:} iOS e Android (gratuito)
+		\citabnt{Microsoft (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	% ----- 8. Legendagem -----
+	\begin{frame}{\faIcon{closed-captioning}~Legendagem automática}
+		\textbf{O que é:} legendas em tempo real
+		\vspace{0.5em}
+		\begin{block}{Como usar na educação inclusiva}
+			\small
+			• Google Meet $\rightarrow$ Ativar legendas\\
+			• YouTube $\rightarrow$ Legendas automáticas $\rightarrow$ editar\\
+			• OBS Studio $\rightarrow$ legendas ao vivo\\
+			• Aulas gravadas com transcrição automática
+		\end{block}
+		\textbf{Para quem:} surdos, baixa audição, não nativos
+		\citabnt{Google (2024); AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{O papel do professor}
+		\begin{center}
+			\Large
+			\textbf{IA não substitui. Amplia.}
+		\end{center}
+		\vspace{1em}
+		\begin{center}
+			Mediação humana é insubstituível.
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026); VALENTE (2022); VYGOTSKY (2007)}
+	\end{frame}
+	
+	\begin{frame}{Condições necessárias}
+		\begin{center}
+			\Large \textbf{Para funcionar:}
+		\end{center}
+		\vspace{1em}
+		\begin{columns}[T]
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+					\item Formação continuada
+					\item Infraestrutura
+					\item Inclusão digital
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+					\item Ética
+					\item Políticas públicas
+					\item Transparência
+				\end{itemize}
+			\end{column}
+		\end{columns}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{Atividade prática — 30 min}
+		\begin{center}
+			\Large \textbf{Mãos na massa}
+		\end{center}
+		\vspace{1.5em}
+		\begin{itemize}
+			\item Escolha 1 ferramenta
+			\item Teste com um caso real
+			\item Compartilhe: funcionou? Por quê?
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Ética e cuidado}
+		\begin{center}
+			\Large \textbf{Antes de usar:}
+		\end{center}
+		\vspace{1em}
+		\begin{center}
+			\Large
+			Privacidade $\cdot$ Vieses $\cdot$ Transparência $\cdot$ Consentimento
+		\end{center}
+		\citabnt{COMISSÃO EUROPEIA (2019); UNESCO (2021)}
+	\end{frame}
+	
+	% ============================================================
+	% BLOCO 3 — O QUÊ
+	% ============================================================
+	\section{O QUÊ}
+	
+	\begin{frame}{}
+		\begin{center}
+			\Huge O QUÊ
+			\vspace{1em}
+			\normalsize
+			O que é IA? O que aprendemos? O que fica?
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Afinal, o que é IA?}
+		\begin{center}
+			\Large \textbf{Inteligência Artificial é:}
+		\end{center}
+		\vspace{1em}
+		\begin{center}
+			Sistemas que simulam capacidades humanas
+			\vspace{0.5em}
+			\normalsize
+			aprender $\cdot$ raciocinar $\cdot$ perceber $\cdot$ decidir
+		\end{center}
+		\citabnt{RUSSELL; NORVIG (2022)}
+	\end{frame}
+	
+	\begin{frame}{IA na educação é...}
+		\begin{center}
+			\Large \textbf{Não é mágica. É ferramenta.}
+		\end{center}
+		\vspace{1em}
+		\begin{columns}[T]
+			\begin{column}{0.5\textwidth}
+				\centering
+				\textbf{Adapta}\\
+				\textbf{Apoia}\\
+				\textbf{Amplia}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\centering
+				\textbf{Mas não substitui}\\
+				\vspace{0.5em}
+				\small o professor
+			\end{column}
+		\end{columns}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{O que os resultados mostram}
+		\begin{center}
+			\Large \textbf{Evidências:}
+		\end{center}
+		\vspace{1em}
+		\begin{center}
+			\Large
+			$+$ Acessibilidade\\
+			$+$ Personalização\\
+			$+$ Autonomia\\
+			$+$ Participação
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{O que ainda desafia}
+		\begin{center}
+			\Large \textbf{Desafios:}
+		\end{center}
+		\vspace{1em}
+		\begin{center}
+			\Large
+			Privacidade $\cdot$ Vieses $\cdot$ Formação $\cdot$ Desigualdade
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026); UNESCO (2021)}
+	\end{frame}
+	
+	\begin{frame}{O que fica}
+		\begin{center}
+			\Large \textbf{Três compromissos:}
+		\end{center}
+		\vspace{1.5em}
+		\begin{enumerate}
+			\item Incluir é propósito
+			\item IA é meio, não fim
+			\item Professor é insubstituível
+		\end{enumerate}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{Atividade final — 20 min}
+		\begin{center}
+			\Large \textbf{Mapa mental coletivo}
+		\end{center}
+		\vspace{1.5em}
+		\begin{itemize}
+			\item O que levo daqui?
+			\item O que vou aplicar?
+			\item O que preciso aprender mais?
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Mensagem final}
+		\begin{center}
+			\Large
+			``A IA não substitui o professor.\\
+			\vspace{0.5em}
+			Potencializa sua atuação.''
+		\end{center}
+		\citabnt{AUGUSTO et al. (2026)}
+	\end{frame}
+	
+	\begin{frame}{}
+		\begin{center}
+			\Huge Obrigado.
+			\vspace{1em}
+			\normalsize
+			Perguntas? Discussões?
+			\vspace{2em}
+
+			\texttt{2024007388@ifam.edu.br}
+		\end{center}
+	\end{frame}
+	
+	% ============================================================
+	% REFERÊNCIAS
+	% ============================================================
+	\begin{frame}[allowframebreaks]{Referências}
+		\footnotesize
+		\begin{thebibliography}{9}
+			
+			\bibitem{augusto2026}
+			AUGUSTO, Emerson Aparecido et al. \textbf{Inteligência artificial e educação inclusiva: transformações promovidas pelas tecnologias inteligentes nos processos de ensino e aprendizagem}. Revista Colombiana de Ciências e Humanidades (REHCOL), [S. l.], v. 1, n. 1, p. 1--13, 2026. DOI: 10.5281/zenodo.21418317.
+			
+			\bibitem{brasil2024}
+			BRASIL. \textbf{VLibras: tradutor automático de Libras}. Brasília: Governo Federal, 2024. Disponível em: \url{https://vlibras.gov.br}. Acesso em: 29 set. 2026.
+			
+			\bibitem{comissao2019}
+			COMISSÃO EUROPEIA. \textbf{Diretrizes éticas para uma inteligência artificial confiável}. Bruxelas: Comissão Europeia, 2019.
+			
+			\bibitem{deepseek2024}
+			DEEPSEEK. \textbf{DeepSeek: AI for reasoning and code}. [S. l.]: DeepSeek, 2024.
+			
+			\bibitem{google2024}
+			GOOGLE. \textbf{NotebookLM e Google Meet: recursos de acessibilidade}. Mountain View: Google, 2024.
+			
+			\bibitem{japiim2024}
+			JAPIIM. \textbf{Plataforma de IA Generativa}. Manaus: Bemol S/A, 2024. Disponível em: \url{https://japiim.com.br}. Acesso em: 29 set. 2026.
+			
+			\bibitem{microsoft2024}
+			MICROSOFT. \textbf{Seeing AI: um app gratuito para pessoas com deficiência visual}. Redmond: Microsoft, 2024.
+			
+			\bibitem{openai2024}
+			OPENAI. \textbf{ChatGPT}. [S. l.]: OpenAI, 2024.
+			
+			\bibitem{perplexity2024}
+			PERPLEXITY. \textbf{Perplexity AI}. [S. l.]: Perplexity, 2024.
+			
+			\bibitem{russell2022}
+			RUSSELL, Stuart; NORVIG, Peter. \textbf{Inteligência Artificial}. 4. ed. Rio de Janeiro: LTC, 2022.
+			
+			\bibitem{unesco1994}
+			ORGANIZAÇÃO DAS NAÇÕES UNIDAS PARA A EDUCAÇÃO, A CIÊNCIA E A CULTURA (UNESCO). \textbf{Declaração de Salamanca e linha de ação sobre necessidades educativas especiais}. Salamanca: UNESCO, 1994.
+			
+			\bibitem{unesco2021}
+			ORGANIZAÇÃO DAS NAÇÕES UNIDAS PARA A EDUCAÇÃO, A CIÊNCIA E A CULTURA (UNESCO). \textbf{Recomendação sobre a ética da inteligência artificial}. Paris: UNESCO, 2021.
+			
+			\bibitem{valente2022}
+			VALENTE, José Armando. Tecnologias digitais, inteligência artificial e educação: perspectivas para a aprendizagem. \textbf{Revista e-Curriculum}, São Paulo, v. 20, n. 2, p. 1--18, 2022.
+			
+			\bibitem{vygotsky2007}
+			VYGOTSKY, Lev S. \textbf{A formação social da mente}. 7. ed. São Paulo: Martins Fontes, 2007.
+			
+		\end{thebibliography}
+	\end{frame}
+	
+\end{document}

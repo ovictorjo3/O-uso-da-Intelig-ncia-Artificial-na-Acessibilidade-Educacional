@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{POR QUÊ}{3}{0}{1}
+\beamer@sectionintoc {2}{COMO}{10}{0}{2}
+\beamer@sectionintoc {3}{O QUÊ}{24}{0}{3}
