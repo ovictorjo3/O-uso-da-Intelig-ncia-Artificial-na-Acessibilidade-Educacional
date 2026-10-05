@@ -6,9 +6,7 @@
 % PACOTES
 % ============================================================
 \usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
-
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -16,32 +14,17 @@
 \usepackage{setspace}
 \usepackage{ragged2e}
 \usepackage{gensymb}
-\usepackage{fontawesome5}
 \usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+
+\newcommand{\faIcon}[1]{} % Fallback para fontawesome
 
 \setbeamertemplate{caption}[numbered]
-\setbeamercovered{transparent} 
+\setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
 
-% ============================================================
-% DADOS — CAPA
-% ============================================================
-\author[Joao Victor]{%
-	Joao Victor\\[0.3em]
-	\small\texttt{2024007388@ifam.edu.br}}
-\title[IA na Acessibilidade
-Educacional]{O uso da Inteligência Artificial na Acessibilidade
-	Educacional}
-%\subtitle{Do propósito à prática com ferramentas reais}
-\institute[]{%
-	\textsuperscript{} Graduando em Licenciatura em Matemática\\
-	%	\small Instituto Federal de Educação, Ciência e Tecnologia
-}
-\date{\today}
-
-% ============================================================
-% COMANDOS AUXILIARES
-% ============================================================
 \newcommand{\citabnt}[1]{%
 	\vfill
 	\begin{flushright}
@@ -50,8 +33,16 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 }
 
 % ============================================================
-% DOCUMENTO
+% DADOS — CAPA
 % ============================================================
+\author[Joao Victor]{%
+	Joao Victor\\[0.3em]
+	\small\texttt{2024007388@ifam.edu.br}}
+\title[IA na Acessibilidade Educacional]{O uso da Inteligência Artificial na Acessibilidade Educacional}
+\institute[]{%
+	Graduando em Licenciatura em Matemática\\}
+\date{\today}
+
 \begin{document}
 	
 	% ---------- CAPA ----------
@@ -75,13 +66,11 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 			\begin{column}{0.33\textwidth}
 				\centering
 				\textbf{\large COMO}\\[0.3em]
-				
 				\tiny Prática
 			\end{column}
 			\begin{column}{0.33\textwidth}
 				\centering
 				\textbf{\large O QUÊ}\\[0.3em]
-				
 				\tiny Síntese
 			\end{column}
 		\end{columns}
@@ -127,17 +116,17 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 		\begin{columns}[T]
 			\begin{column}{0.33\textwidth}
 				\centering
-				\faIcon{blind}\\[0.3em]
+				\textbf{Barreiras}\\[0.3em]
 				Físicas\\ Comunicacionais
 			\end{column}
 			\begin{column}{0.33\textwidth}
 				\centering
-				\faIcon{laptop}\\[0.3em]
+				\textbf{Barreiras}\\[0.3em]
 				Tecnológicas\\ Metodológicas
 			\end{column}
 			\begin{column}{0.33\textwidth}
 				\centering
-				\faIcon{users}\\[0.3em]
+				\textbf{Barreiras}\\[0.3em]
 				Atitudinais
 			\end{column}
 		\end{columns}
@@ -212,7 +201,6 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 					\item \textbf{Japiim (Bemol)} — IA do Norte
 					\item \textbf{VLibras} — tradução Libras
 					\item \textbf{Seeing AI} — visão computacional
-				
 				\end{itemize}
 			\end{column}
 		\end{columns}
@@ -220,83 +208,102 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 	\end{frame}
 	
 	% ----- 1. ChatGPT -----
-	\begin{frame}{\faIcon{robot}~ChatGPT}
-		\textbf{O que é:} assistente conversacional da OpenAI
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
+	\begin{frame}{ChatGPT — Engenharia de Prompt}
+		\textbf{Aplicação:} Assistente geral e adaptação pedagógica.
+		
+		\vspace{0.4em}
+		\begin{block}{Script Genérico (Superficial)}
 			\small
-			• Criar tutor personalizado por disciplina\\
-			• Adaptar textos para diferentes níveis de leitura\\
-			• Gerar atividades diferenciadas\\
-			• Explicar conceitos em linguagem simples
+			\textit{``Adapte um texto sobre célula para um aluno autista do 8º ano.''}
 		\end{block}
-		\textbf{Exemplo de prompt:}
-		\textit{``Adapte este texto para um aluno com dislexia, use frases curtas e linguagem simples.''}
+		
+		\vspace{0.3em}
+		\begin{block}{Script Específico e Estruturado (AEE + Ciências Biológicas)}
+			\justifying
+			\small
+			\textit{``Sou professor AEE. Tenho um estudante tea nivel de suporte 2. Ele tem dificuldade de leitura. me ajude a elabora de forma humanizada um plano de aula. Uma aula de 60 minutos. Para estudante do 8 ano. Um romance amazônico. Com citações e referências. Uma atividade prática para nota. Ter um tempo para ele fazer com o professor AEE de apoio. Dê sugestões de imagem para facilitar o plano de aula''}
+		\end{block}
 		\citabnt{OpenAI (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	% ----- 2. DeepSeek -----
-	\begin{frame}{\faIcon{brain}~DeepSeek}
-		\textbf{O que é:} IA com foco em raciocínio e código
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
+	\begin{frame}{DeepSeek — Engenharia de Prompt}
+		\textbf{Aplicação:} Raciocínio lógico, matemática e código acessível.
+		
+		\vspace{0.4em}
+		\begin{block}{Script Genérico (Superficial)}
 			\small
-			• Resolver problemas matemáticos passo a passo\\
-			• Criar materiais em LaTeX acessíveis\\
-			• Gerar descrições alternativas para imagens\\
-			• Apoiar programação para alunos com deficiência
+			\textit{``Me dê um exercício de genética para aluno com discalculia.''}
 		\end{block}
-		\textbf{Diferencial:} gratuito, open-source, forte em raciocínio lógico
+		
+		\vspace{0.3em}
+		\begin{block}{Script Específico e Estruturado (AEE + Biologia)}
+			\justifying
+			\small
+			\textit{``Sou professor de Biologia e AEE. Tenho um estudante com discalculia. Ajude-me a elaborar um plano de aula de 60 min sobre a 1ª Lei de Mendel, usando cartões coloridos e texturas. Inclua citações e referências, uma atividade prática para nota, tempo com apoio do AEE, tabela acessível em LaTeX e sugestões visuais.''}
+		\end{block}
 		\citabnt{DeepSeek (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	% ----- 3. Perplexity -----
-	\begin{frame}{\faIcon{search}~Perplexity}
-		\textbf{O que é:} buscador com IA que cita fontes
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
+	\begin{frame}{Perplexity — Engenharia de Prompt}
+		\textbf{Aplicação:} Pesquisa científica baseada em evidências e fontes.
+		
+		\vspace{0.4em}
+		\begin{block}{Script Genérico (Superficial)}
 			\small
-			• Pesquisar legislação sobre inclusão com fontes\\
-			• Encontrar artigos científicos atualizados\\
-			• Verificar informações sobre tecnologias assistivas\\
-			• Montar bibliografias confiáveis
+			\textit{``Pesquise sobre aula de ecologia para alunos surdos.''}
 		\end{block}
-		\textbf{Diferencial:} respostas com referências verificáveis
+		
+		\vspace{0.3em}
+		\begin{block}{Script Específico e Estruturado (AEE + Biologia)}
+			\justifying
+			\small
+			\textit{``Sou professor de Ciências. Tenho uma estudante surda. Ajude-me a elaborar um plano de aula de 60 minutos sobre conservação da biodiversidade amazônica, com citações e referências em ABNT. Inclua uma atividade prática de campo, tempo com intérprete de Libras e AEE e infográficos visuais.
+				.''}
+		\end{block}
 		\citabnt{Perplexity (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	% ----- 4. NotebookLM -----
-	\begin{frame}{\faIcon{book}~NotebookLM}
-		\textbf{O que é:} IA do Google para analisar documentos
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
+	\begin{frame}{NotebookLM — Engenharia de Prompt}
+		\textbf{Aplicação:} Análise de documentos e geração de materiais acessíveis.
+		
+		\vspace{0.4em}
+		\begin{block}{Script Genérico (Superficial)}
 			\small
-			• Fazer upload de PDFs e gerar resumos\\
-			• Criar guias de estudo a partir de materiais\\
-			• Gerar podcasts (Audio Overview) sobre conteúdos\\
-			• Responder perguntas com base nos documentos
+			\textit{``Resuma o artigo de botânica para aluno com TDAH e baixa visão.''}
 		\end{block}
-		\textbf{Diferencial:} trabalha só com o que você envia
+		
+		\vspace{0.3em}
+		\begin{block}{Script Específico e Estruturado (AEE + Biologia)}
+			\justifying
+			\small
+			\textit{``Sou professor de AEE. Com base nos artigos de Botânica anexados, ajude-me a elaborar um plano de aula de 60 minutos sobre morfologia vegetal, com citações dos autores. Inclua uma atividade prática sensorial, tempo com apoio do AEE, um roteiro de áudio (Audio Overview) e imagens em alto contraste.''}
+		\end{block}
 		\citabnt{Google (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	% ----- 5. Japiim (Bemol) -----
-	\begin{frame}{\faIcon{map-marked-alt}~Japiim (Bemol)}
-		\textbf{O que é:} plataforma de IA generativa da Bemol S/A, sediada em Manaus
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
+	\begin{frame}{Japiim (Bemol) — Engenharia de Prompt}
+		\textbf{O que é:} plataforma de IA generativa (Manaus)
+		\vspace{0.4em}
+		\begin{block}{Script Genérico (Superficial)}
 			\small
-			• Acesso a modelos da OpenAI, Groq, Anthropic, Google e Meta\\
-			• Criação de Assistentes personalizados por tema\\
-			• Atendimento em português com contexto amazônico\\
-			• Apoio a estudantes ribeirinhos e indígenas
+			\textit{``Monte uma aula sobre cadeia alimentar na Amazônia.''}
 		\end{block}
-		\textbf{Diferencial:} IA do Norte, democratiza acesso à IA no Brasil
+		
+		\vspace{0.3em}
+		\begin{block}{Script Específico e Estruturado (AEE + Biologia)}
+			\justifying
+			\small
+			\textit{``Sou professor em uma escola ribeirinha. Tenho um estudante com dificuldades de aprendizagem no 8º ano. Ajude-me a elaborar um plano de aula de 60 minutos sobre relações ecológicas nos rios amazônicos, com referências regionais, atividade prática de teia alimentar e acompanhamento do AEE.''}
+		\end{block}
 		\citabnt{Japiim (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	% ----- 6. VLibras -----
-	\begin{frame}{\faIcon{hands}~VLibras}
+	\begin{frame}{VLibras}
 		\textbf{O que é:} tradutor automático para Libras (gov.br)
 		\vspace{0.5em}
 		\begin{block}{Como usar na educação inclusiva}
@@ -311,7 +318,7 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 	\end{frame}
 	
 	% ----- 7. Seeing AI -----
-	\begin{frame}{\faIcon{eye}~Seeing AI}
+	\begin{frame}{Seeing AI}
 		\textbf{O que é:} app da Microsoft que descreve o mundo
 		\vspace{0.5em}
 		\begin{block}{Como usar na educação inclusiva}
@@ -323,21 +330,6 @@ Educacional]{O uso da Inteligência Artificial na Acessibilidade
 		\end{block}
 		\textbf{Onde:} iOS e Android (gratuito)
 		\citabnt{Microsoft (2024); AUGUSTO et al. (2026)}
-	\end{frame}
-	
-	% ----- 8. Legendagem -----
-	\begin{frame}{\faIcon{closed-captioning}~Legendagem automática}
-		\textbf{O que é:} legendas em tempo real
-		\vspace{0.5em}
-		\begin{block}{Como usar na educação inclusiva}
-			\small
-			• Google Meet $\rightarrow$ Ativar legendas\\
-			• YouTube $\rightarrow$ Legendas automáticas $\rightarrow$ editar\\
-			• OBS Studio $\rightarrow$ legendas ao vivo\\
-			• Aulas gravadas com transcrição automática
-		\end{block}
-		\textbf{Para quem:} surdos, baixa audição, não nativos
-		\citabnt{Google (2024); AUGUSTO et al. (2026)}
 	\end{frame}
 	
 	\begin{frame}{O papel do professor}
